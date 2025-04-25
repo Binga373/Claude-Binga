@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Entête */
+header {
+    background-color: #e6f5e6;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header-top h1 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 28px;
+    color: #2d572c;
+    margin: 10px 0;
+}
+
+.header-img {
+    width: 80px;
+    height: auto;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #2d572c;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.menu a {
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.menu a:hover {
+    background-color: #4d804d;
+}
+
+/* Corps */
+.container {
+    display: flex;
+    padding: 40px 20px;
+    background-color: #f9fdf9;
+    gap: 20px;
+}
+
+.col {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #cce3cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.col.gauche,
+.col.droite {
+    flex: 1;
+}
+
+.col.centre {
+    flex: 2;
+}
+
+.col img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2d572c;
+    color: white;
+    font-size: 16px;
+}
+
+/* --------------------------- */
+/* 📱 Responsive version       */
+/* --------------------------- */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-img {
+        margin: 10px 0;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu a {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #3f6f3f;
+    }
+
+    .menu a:first-child {
+        border-top: none;
+    }
+}
+/* Justifier le texte dans toutes les colonnes */
+.col p {
+    text-align: justify;
+}
